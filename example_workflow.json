@@ -1,0 +1,170 @@
+{
+  "last_node_id": 3,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LlamaLiteNode",
+      "pos": [100, 100],
+      "size": [400, 300],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "response_message",
+          "type": "STRING",
+          "links": [1],
+          "slot_index": 0
+        },
+        {
+          "name": "chat_history", 
+          "type": "STRING",
+          "links": [2],
+          "slot_index": 1
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "http://localhost:8080/v1",
+        "Hello! Can you explain what quantum computing is in simple terms?",
+        "You are a helpful AI assistant that explains complex topics in an easy-to-understand way.",
+        "[]"
+      ],
+      "title": "LlamaLite Chat"
+    },
+    {
+      "id": 2,
+      "type": "ShowText",
+      "pos": [600, 100],
+      "size": [300, 200],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING", 
+          "link": 1
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [""],
+      "title": "Response Message"
+    },
+    {
+      "id": 3,
+      "type": "ShowText", 
+      "pos": [600, 350],
+      "size": [300, 200],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 2
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [""],
+      "title": "Chat History"
+    }
+  ],
+  "links": [
+    [1, 1, 0, 2, 0, "STRING"],
+    [2, 1, 1, 3, 0, "STRING"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4,
+  "workflow": {
+    "nodes": [
+      {
+        "id": 1,
+        "type": "LlamaLiteNode",
+        "pos": [100, 100],
+        "size": [400, 300],
+        "flags": {},
+        "order": 0,
+        "mode": 0,
+        "inputs": [],
+        "outputs": [
+          {
+            "name": "response_message",
+            "type": "STRING",
+            "links": [1],
+            "slot_index": 0
+          },
+          {
+            "name": "chat_history",
+            "type": "STRING", 
+            "links": [2],
+            "slot_index": 1
+          }
+        ],
+        "properties": {},
+        "widgets_values": [
+          "http://localhost:8080/v1",
+          "Hello! Can you explain what quantum computing is in simple terms?",
+          "You are a helpful AI assistant that explains complex topics in an easy-to-understand way.",
+          "[]"
+        ],
+        "title": "LlamaLite Chat"
+      },
+      {
+        "id": 2,
+        "type": "ShowText",
+        "pos": [600, 100],
+        "size": [300, 200],
+        "flags": {},
+        "order": 1,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "text",
+            "type": "STRING",
+            "link": 1
+          }
+        ],
+        "outputs": [],
+        "properties": {},
+        "widgets_values": [""],
+        "title": "Response Message"
+      },
+      {
+        "id": 3,
+        "type": "ShowText",
+        "pos": [600, 350], 
+        "size": [300, 200],
+        "flags": {},
+        "order": 2,
+        "mode": 0,
+        "inputs": [
+          {
+            "name": "text",
+            "type": "STRING",
+            "link": 2
+          }
+        ],
+        "outputs": [],
+        "properties": {},
+        "widgets_values": [""],
+        "title": "Chat History"
+      }
+    ],
+    "links": [
+      [1, 1, 0, 2, 0, "STRING"],
+      [2, 1, 1, 3, 0, "STRING"]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {},
+    "version": 0.4
+  }
+}
